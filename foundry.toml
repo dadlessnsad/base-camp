@@ -3,4 +3,13 @@ src = "src"
 out = "out"
 libs = ["lib"]
 
-# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
+[fuzz]
+runs = 5000
+max_test_rejects = 999999
+
+[rpc_endpoints]
+base_goerli = "${BASE_GOERLI_RPC_URL}"
+
+[etherscan]
+base_goerli = { key = "base_goerli", url = "${BASE_GOERLI_SCAN_KEY}" }
+
